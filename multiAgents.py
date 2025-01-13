@@ -108,7 +108,7 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
             Implementing the Alpha-Beta pruning algorithm.
           
             """
-            # Checkong if the game is over (win/lose) or if the depth limit is reached.
+            # Checking if the game is over (win/lose) or if the depth limit is reached.
             # In such cases, return the evaluation score of the current state.
             if state.isWin() or state.isLose() or depth == self.depth:
                 return self.evaluationFunction(state)

@@ -22,8 +22,6 @@ Can Win or Loss
 
 
 
-
-
 Berkeley AI Materials    
 
 Project 2: Multi-Agent Search
