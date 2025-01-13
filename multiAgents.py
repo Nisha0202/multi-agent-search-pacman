@@ -136,7 +136,7 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
                         break
                 return value
 
-        # Get all legal actions for Pacman at the root of the game tree.
+        # all legal actions for Pacman at the root of the game tree.
         legalMoves = gameState.getLegalActions()
         bestAction = None  # To store the best action for Pacman.
         alpha, beta = float('-inf'), float('inf')  # Initializing alpha and beta with extreme values.
