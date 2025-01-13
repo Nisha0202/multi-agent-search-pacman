@@ -15,7 +15,9 @@ The AlphaBetaAgent implements Minimax with Alpha-Beta Pruning to improve Pacman'
 
 command to run = `python pacman.py -p AlphaBetaAgent -a depth=3 -l smallClassic`
 
-Output:
+## Output: 
+Can Win or Loss
+
 ![lab06cse366](https://github.com/user-attachments/assets/68193422-b13d-427b-9a9f-01177b984022)
 
 
