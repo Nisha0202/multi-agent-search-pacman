@@ -257,7 +257,7 @@ def evaluate(generateSolutions, testRoot, moduleDict, exceptionMap=ERROR_HINT_MA
         questionDicts[q] = questionDict
 
         # load test cases into question
-        tests = filter(lambda t: re.match('[^#~.].*\.test\Z', t), os.listdir(subdir_path))
+        tests = filter(lambda t: re.match(r'[^#~.].*\.test\Z', t), os.listdir(subdir_path))
         tests = map(lambda t: re.match('(.*)\.test\Z', t).group(1), tests)
         for t in sorted(tests):
             test_file = os.path.join(subdir_path, '%s.test' % t)
@@ -267,7 +267,7 @@ def evaluate(generateSolutions, testRoot, moduleDict, exceptionMap=ERROR_HINT_MA
             if testDict.get("disabled", "false").lower() == "true":
                 continue
             testDict['test_out_file'] = test_out_file
-            testClass = getattr(projectTestClasses, testDict['class'])
+            testClass = getattr(projectTestClasses, testDict['class']) # type: ignore
             testCase = testClass(question, testDict)
             def makefun(testCase, solution_file):
                 if generateSolutions:
@@ -345,3 +345,5 @@ def main(argv):
 
 if __name__ == '__main__':
     main(sys.argv)
+
+# python autograder.py -q q2 --no-graphics
