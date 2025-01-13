@@ -10,15 +10,15 @@ The AlphaBetaAgent implements Minimax with Alpha-Beta Pruning to improve Pacman'
 4. Best Action Selection: Pacman selects the best action based on the evaluation scores, using updated alpha and beta values to prune unnecessary checks.
 
 ## In betterEvaluationFunction:
-1. Increased food encouragement: Stronger focus on eating the closest food.
-2. Reduced penalty for close ghosts: Less harsh penalty when near ghosts.
+1. Increased Food Encouragement: Stronger focus on eating the closest food.
+2. Reduced Penalty For Close Ghosts: Less harsh penalty when near ghosts.
 
 command to run = `python pacman.py -p AlphaBetaAgent -a depth=3 -l smallClassic`
 
-Output:
+## Output: 
+Can Win or Loss
 
-
-
+![lab06cse366](https://github.com/user-attachments/assets/68193422-b13d-427b-9a9f-01177b984022)
 
 
 
