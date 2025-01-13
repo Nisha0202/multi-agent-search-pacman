@@ -1,3 +1,29 @@
+# My implementation
+
+
+## In AlphaBetaAgent Class
+The AlphaBetaAgent implements Minimax with Alpha-Beta Pruning to improve Pacman's decision-making.
+
+1. Alpha-Beta Pruning: Reduces the number of states to evaluate by pruning branches that won't affect the final decision.
+2. Maximizing & Minimizing Agents: Pacman maximizes the score, while ghosts minimize it.
+3. State Evaluation: If the game is won/lost or the depth limit is reached, the evaluation score is returned.
+4. Best Action Selection: Pacman selects the best action based on the evaluation scores, using updated alpha and beta values to prune unnecessary checks.
+
+## In betterEvaluationFunction:
+1. Increased food encouragement: Stronger focus on eating the closest food.
+2. Reduced penalty for close ghosts: Less harsh penalty when near ghosts.
+
+command to run = `python pacman.py -p AlphaBetaAgent -a depth=3 -l smallClassic`
+
+Output:
+
+
+
+
+
+
+
+
 Berkeley AI Materials    
 
 Project 2: Multi-Agent Search
