@@ -108,7 +108,7 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
             Implementing the Alpha-Beta pruning algorithm.
           
             """
-            # Check if the game is over (win/lose) or if the depth limit is reached.
+            # Checkong if the game is over (win/lose) or if the depth limit is reached.
             # In such cases, return the evaluation score of the current state.
             if state.isWin() or state.isLose() or depth == self.depth:
                 return self.evaluationFunction(state)
@@ -118,7 +118,7 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
                 for action in state.getLegalActions(agentIndex):  
                     # Calculating the value of the successor state using Alpha-Beta recursively.
                     value = max(value, alphaBeta(state.generateSuccessor(agentIndex, action), depth, 1, alpha, beta))
-                    alpha = max(alpha, value)  # Uupdate alpha with the maximum value found so far.
+                    alpha = max(alpha, value)  # update alpha with the maximum value found so far.
                     if alpha >= beta: 
                         break
                 return value
@@ -211,7 +211,7 @@ def betterEvaluationFunction(currentGameState):
             ghostScore -= 75 / (dist + 1)  # reduced penalty for close ghosts
 
     # Capsule Penalty
-    capsuleScore = -100 * len(capsules)  # Encourage eating capsules but reduce penalty weight
+    capsuleScore = -100 * len(capsules)  # Encourages eating capsules but reduce penalty weight
 
     # Combining scores
     return currentGameState.getScore() + foodScore + ghostScore + capsuleScore
